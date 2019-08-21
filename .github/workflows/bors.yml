@@ -1,0 +1,13 @@
+name: Bors Labeller
+
+on: [check_run, check_suite, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: ppb/actions-bors@master
+      with:
+        spam: eggs
