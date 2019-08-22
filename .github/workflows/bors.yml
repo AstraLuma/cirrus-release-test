@@ -1,6 +1,6 @@
 name: Bors Labeller
 
-on: [check_run, pull_request]
+on: [check_suite, pull_request]
 
 jobs:
   label:
@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: ppb/actions-bors@master
-      if: github.event_name == 'check_run' && github.event.check_run.app.name != 'Cirrus CI'
+      # if: github.event_name == 'check_run' && github.event.check_run.app.name != 'Cirrus CI'
       with:
         foo: bar
         spam: eggs
