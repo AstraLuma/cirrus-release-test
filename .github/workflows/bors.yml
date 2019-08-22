@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: ppb/actions-bors@master
-      # if: github.event_name == 'check_run' && github.event.action == 'unassigned'
+      if: github.event_name == 'check_run' && github.event.check_run.app.name != 'Cirrus CI'
       with:
         foo: bar
         spam: eggs
