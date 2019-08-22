@@ -1,6 +1,6 @@
 name: Bors Labeller
 
-on: [check_run, check_suite, pull_request]
+on: [check_run, pull_request]
 
 jobs:
   label:
@@ -9,6 +9,7 @@ jobs:
     
     steps:
     - uses: ppb/actions-bors@master
+      # if: github.event_name == 'check_run' && github.event.action == 'unassigned'
       with:
         foo: bar
         spam: eggs
