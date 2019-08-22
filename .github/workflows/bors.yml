@@ -3,7 +3,7 @@ name: Bors Labeller
 on: [check_run, check_suite, pull_request]
 
 jobs:
-  build:
+  label:
 
     runs-on: ubuntu-latest
     
