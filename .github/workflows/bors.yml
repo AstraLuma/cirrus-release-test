@@ -10,4 +10,5 @@ jobs:
     steps:
     - uses: ppb/actions-bors@master
       with:
+        foo: bar
         spam: eggs
